@@ -577,6 +577,7 @@ p {
 /* ── Mobile toggle ── */
 .menu-toggle {
   display: none;
+  position: relative;
   width: 2.75rem;
   height: 2.75rem;
   border: 1px solid var(--line);
@@ -586,7 +587,7 @@ p {
   cursor: pointer;
 }
 
-.menu-toggle span {
+.menu-toggle span:not(.sr-only) {
   display: block;
   height: 2px;
   width: 100%;
@@ -635,6 +636,22 @@ p {
 }
 
 @media (max-width: 600px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+  }
+
+  body {
+    position: relative;
+    touch-action: pan-y;
+  }
+
+  .container {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+
   .brand-logo {
     height: 4rem;
   }
