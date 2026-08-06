@@ -21,6 +21,9 @@ html,
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -29,6 +32,13 @@ body {
   background: var(--bg);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+main,
+.site-header,
+.site-footer {
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 h1,
